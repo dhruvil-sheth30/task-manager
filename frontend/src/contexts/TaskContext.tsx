@@ -3,8 +3,8 @@ import { useAuth } from './AuthContext';
 import { toast } from "sonner";
 import axios from 'axios';
 
-// API base URL - change this to your deployed backend URL when ready
-const API_URL = 'http://localhost:5000/api';
+// API base URL from environment variables
+const API_URL = import.meta.env.VITE_API_URL;
 
 export type TaskCategory = 'Work' | 'Personal' | 'Urgent';
 export type TaskPriority = 'Low' | 'Medium' | 'High';

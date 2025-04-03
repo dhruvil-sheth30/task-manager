@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://dhruvil:Alcloud@cluster-1.r54f1tp.mongodb.net/task-manager?retryWrites=true&w=majority&appName=Cluster-1')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected successfully'))
   .catch(err => {
     console.error('MongoDB connection error:', err);
